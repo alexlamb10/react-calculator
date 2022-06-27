@@ -20,8 +20,30 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 20vw;
+}
+
+.total {
+  background-color: rgb(58, 55, 55);
+  color: white;
+  height: 20%;
+  display: flex;
+  font-size: 6vh;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.total p {
+  margin-right: 5%;
+}
+
+
 
 .App-link {
   color: #61dafb;

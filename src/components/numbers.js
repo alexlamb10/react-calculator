@@ -1,9 +1,9 @@
 import React from 'react'
 
-function numbers() {
+function Numbers() {
   return (
     <div>numbers</div>
   )
 }
 
-export default numbers
+export default Numbers

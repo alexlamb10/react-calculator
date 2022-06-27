@@ -1,9 +1,9 @@
 import React from 'react'
 
-function operations() {
+function Operations() {
   return (
     <div>operations</div>
   )
 }
 
-export default operations
+export default Operations
