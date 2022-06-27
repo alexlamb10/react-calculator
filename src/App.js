@@ -11,7 +11,7 @@ function App() {
       <div className='calc'>
         <TotalNumber />
         <div className='keys'>
-          <div>
+          <div className='num-clear'>
             <ClearTotal />
             <Numbers />
           </div>

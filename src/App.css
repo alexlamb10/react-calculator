@@ -43,7 +43,51 @@
   margin-right: 5%;
 }
 
+.keys {
+  display: flex;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
 
+.num-clear {
+  width: 75%;
+}
+
+.clear-btn {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .5px solid rgb(58, 55, 55);
+  cursor: pointer;
+}
+
+.numsDiv{
+  height: 75%;
+}
+
+.nums {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.singleNum{
+  width: 32.64%;
+  margin: 0;  
+  height: 33%;
+  border: .8px solid rgb(58, 55, 55);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  font-weight: 500;
+}
 
 .App-link {
   color: #61dafb;

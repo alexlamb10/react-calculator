@@ -2,7 +2,7 @@ import React from 'react'
 
 function ClearTotal() {
   return (
-    <div>ClearTotal</div>
+    <div className='clear-btn'>clear</div>
   )
 }
 
