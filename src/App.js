@@ -15,7 +15,7 @@ function App() {
             <ClearTotal />
             <Numbers />
           </div>
-          <div>
+          <div className='ops'>
             <Operations />
           </div>
         </div>

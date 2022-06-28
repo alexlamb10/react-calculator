@@ -89,9 +89,38 @@
   font-weight: 500;
 }
 
+.singleNum:hover, .clear-btn:hover {
+  background-color: lightgrey;
+}
+
 .App-link {
   color: #61dafb;
 }
+
+.ops{
+  width: 24.5%;
+}
+
+.ops-div{
+  height: 98.7%;
+}
+
+.ops-div div {
+  width: 100%;
+  height: 20%;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .8px solid rgb(58, 55, 55);
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+.ops-div div:hover {
+  background-color: rgb(238, 99, 99);
+}
+
 
 @keyframes App-logo-spin {
   from {
