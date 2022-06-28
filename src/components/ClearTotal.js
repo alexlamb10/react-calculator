@@ -1,8 +1,15 @@
 import React from 'react'
 
-function ClearTotal() {
+function ClearTotal({setNumber, setOperation, setTotal}) {
+
+  function clear() {
+    setNumber(0)
+    setTotal(0)
+    setOperation("")
+  }
+
   return (
-    <div className='clear-btn'>clear</div>
+    <div onClick={clear} className='clear-btn'>clear</div>
   )
 }
 

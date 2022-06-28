@@ -17,11 +17,11 @@ function App() {
         <TotalNumber total={total} number={number} />
         <div className="keys">
           <div className="num-clear">
-            <ClearTotal />
+            <ClearTotal setTotal={setTotal} setOperation={setOperation} setNumber={setNumber} />
             <Numbers number={number} setNumber={setNumber} />
           </div>
           <div className="ops">
-            <Operations setOperation={setOperation} number={number} operation={operation} />
+            <Operations setNumber={setNumber} total={total} setTotal={setTotal} setOperation={setOperation} number={number} operation={operation} />
           </div>
         </div>
       </div>

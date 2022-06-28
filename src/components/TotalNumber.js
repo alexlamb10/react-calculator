@@ -8,7 +8,6 @@ function TotalNumber({ total, number }) {
       setDisplay(total);
     } else {
       setDisplay(number);
-      console.log(display)
     }
 
   }, [display, number, total])

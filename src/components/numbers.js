@@ -11,7 +11,6 @@ function Numbers({number, setNumber}) {
             setNumber(num)
         }else{
             setNumber(number += num)
-            console.log(number)
         }
 
     }
