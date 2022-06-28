@@ -1,14 +1,31 @@
 import React from 'react'
 
-function Operations() {
+function Operations({ setOperation, number }) {
+  function setOp(e) {
+    let op = e.target.className;
+    
+    setOperation(op);
+
+
+  }
 
   return (
-    <div className='ops-div'>
-      <div key="plus">&#43;</div>
-      <div key="minus">&#8722;</div>
-      <div key="times">&#215;</div>
-      <div key="divide">&#247;</div>
-      <div key="equals">&#61;</div>
+    <div className="ops-div">
+      <div onClick={setOp} className="plus">
+        &#43;
+      </div>
+      <div onClick={setOp} className="minus">
+        &#8722;
+      </div>
+      <div onClick={setOp} className="multiply">
+        &#215;
+      </div>
+      <div onClick={setOp} className="divide">
+        &#247;
+      </div>
+      <div className="equals">
+        &#61;
+      </div>
     </div>
   );
 }
