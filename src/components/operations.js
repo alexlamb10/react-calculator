@@ -16,7 +16,7 @@ function Operations({ setNumber, setOperation, number, operation, setTotal, tota
 
   function equal() {
     if (operation === "plus") {
-        setTotal(total + number)
+        setTotal(+total + +number)
         setNumber(0);
         setOperation("")
     } else if (operation === "minus") {
