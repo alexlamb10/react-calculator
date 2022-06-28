@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Operations({ setOperation, number }) {
+function Operations({ setOperation, number, operation }) {
   function setOp(e) {
     let op = e.target.className;
     

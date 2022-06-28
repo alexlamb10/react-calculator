@@ -11,9 +11,9 @@ function Numbers({number, setNumber}) {
             setNumber(num)
         }else{
             setNumber(number += num)
+            console.log(number)
         }
 
-        console.log(number)
     }
 
   return (

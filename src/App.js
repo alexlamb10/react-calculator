@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App App-header ">
       <div className="calc">
-        <TotalNumber total={total} />
+        <TotalNumber total={total} number={number} />
         <div className="keys">
           <div className="num-clear">
             <ClearTotal />
