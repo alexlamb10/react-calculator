@@ -1,36 +1,57 @@
 import React from "react";
 
-function Operations({ setNumber, setOperation, number, operation, setTotal, total }) {
+function Operations({
+  setNumber,
+  setOperation,
+  number,
+  operation,
+  setTotal,
+  total,
+  setNumOfOperation,
+  numOfOperation,
+}) {
   function setOp(e) {
     let op = e.target.className;
 
-    if(number === 0 && operation === ""){
-        setOperation(op)
-    }else if(number !== 0 && operation !== ""){
-        equal()
-        setNumber(0)
-        setOperation(op)
+    if (number === 0 && operation === "") {
+      setOperation(op);
+      setNumOfOperation(numOfOperation+1)
+    } else if (number !== 0 && operation !== "") {
+      equal();
+      setNumber(0);
+      setOperation(op);
     }
-
   }
 
   function equal() {
     if (operation === "plus") {
-        setTotal(+total + +number)
-        setNumber(0);
-        setOperation("")
+      setNumOfOperation(numOfOperation+1);
+      setTotal(+total + +number);
+      setNumber(0);
+      setOperation("");
     } else if (operation === "minus") {
-        setTotal(total - number)
+      setTotal(total - number);
+      setNumOfOperation(numOfOperation+1);
+      setNumber(0);
+      setOperation("");
+    } else if (operation === "divide") {
+      if (total % number !== 0) {
+        let num = total / number;
+        setNumOfOperation(numOfOperation+1);
+        setTotal(num.toFixed(3));
+        setNumber(0);
+      setOperation("");
+      } else {
+        setTotal(total / number);
+        setNumOfOperation(numOfOperation+1);
         setNumber(0);
         setOperation("");
-    }else if (operation === "divide") {
-        setTotal(total / number)
-        setNumber(0);
-        setOperation("");
-    }else if (operation === "multiply") {
-        setTotal(total * number)
-        setNumber(0)
-        setOperation("");
+      }
+    } else if (operation === "multiply") {
+      setTotal(total * number);
+      setNumOfOperation(numOfOperation+1);
+      setNumber(0);
+      setOperation("");
     }
   }
 
@@ -48,7 +69,9 @@ function Operations({ setNumber, setOperation, number, operation, setTotal, tota
       <div onClick={setOp} className="divide">
         &#247;
       </div>
-      <div onClick={equal} className="equals">&#61;</div>
+      <div onClick={equal} className="equals">
+        &#61;
+      </div>
     </div>
   );
 }

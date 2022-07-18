@@ -9,6 +9,7 @@ function App() {
   const [total, setTotal] = useState(0)
   const [operation, setOperation] = useState("")
   const [number, setNumber] = useState(0)
+  const [numOfOperation, setNumOfOperation] = useState(0)
 
 
   return (
@@ -17,11 +18,31 @@ function App() {
         <TotalNumber total={total} number={number} />
         <div className="keys">
           <div className="num-clear">
-            <ClearTotal setTotal={setTotal} setOperation={setOperation} setNumber={setNumber} />
-            <Numbers number={number} setNumber={setNumber} />
+            <ClearTotal
+              setTotal={setTotal}
+              setOperation={setOperation}
+              setNumber={setNumber}
+              setNumOfOperation={setNumOfOperation}
+            />
+            <Numbers
+              number={number}
+              setNumber={setNumber}
+              setTotal={setTotal}
+              numOfOperation={numOfOperation}
+              total={total}
+            />
           </div>
           <div className="ops">
-            <Operations setNumber={setNumber} total={total} setTotal={setTotal} setOperation={setOperation} number={number} operation={operation} />
+            <Operations
+              setNumber={setNumber}
+              total={total}
+              setTotal={setTotal}
+              setOperation={setOperation}
+              number={number}
+              operation={operation}
+              setNumOfOperation={setNumOfOperation}
+              numOfOperation={numOfOperation}
+            />
           </div>
         </div>
       </div>
